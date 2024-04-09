@@ -1,7 +1,8 @@
 export default function compare(a: BinaryNode<number> | null, b: BinaryNode<number> | null): boolean {
-  // pre
+  // structural check
   if(a === null && b === null) return true;
   if(a === null || b === null) return false;
+  // value check
   if(a.value !== b.value) return false;
 
   // recurse
